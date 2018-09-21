@@ -2,9 +2,9 @@ import setup
 import RoboPiLib as RPL
 import time
 
-x = #PIN number of motor
-y = #motor forwards
-z = #motor backwards
+x = 1
+y = 2000
+z = 1000
 
 print "Enter a to open and b to close: "
 if raw_input("> ") == "a":
