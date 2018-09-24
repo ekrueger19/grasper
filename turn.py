@@ -10,5 +10,5 @@ RPL.servoWrite(0, start)
 print "press a to turn right and b to turn left"
 while raw_input("> ") == "a":
     RPL.servoWrite(0, end)
-    if raw_input("> ") =! "a":
+    if raw_input("> ") != "a":
         RPL.servoWrite(0, start)
