@@ -27,7 +27,11 @@ if w == "c":
         if time.time() >= T:
             RPL.servoWrite(x, 0)
 if w == "d":
-    T =
+    T = time.time() + 2
+    while time.time*() < T:
+        RPL.servoWrite(x, z)
+        if time.time() >= T:
+            RPL.servoWrite(x, 0)
 else:
     print "You done messed up"
 
