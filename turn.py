@@ -3,12 +3,15 @@ import RoboPiLib as RPL
 import time
 
 x = 0
-start = 600
-end = 3000
+start = 3000
+left = 600
 
-RPL.servoWrite(0, start)
-print "press a to turn right and b to turn left"
-while raw_input("> ") == "a":
-    RPL.servoWrite(0, end)
-    if raw_input("> ") != "a":
-        RPL.servoWrite(0, start)
+# read whether the motor is at 3000 or 600
+# make the motor turn to the other, based on
+motor = RPL.servoRead(0)
+if motor == start:
+    RPL.servoWrite(0, left)
+elif motor == left:
+    RPL.servoWrite(0, start)
+else:
+    print "WRONG"
