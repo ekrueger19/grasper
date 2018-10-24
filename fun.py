@@ -5,9 +5,18 @@ x = 1
 y = 2
 twist = 0
 
-print "What do you want to do? Write then between each action."
-print "Actions include: up, down, close, open, left-twist, right-twist"
+print "What do you want to do? add a comma between each action."
+print "Actions include: up, down, close, op, left-twist, right-twist"
 def act(w):
-    return list(w)
+    egg = list(str(w))
+    for up in egg:
+        print "going up"
+    for down in egg:
+        print "going down"
+    for close in egg:
+        print "closing"
+    for op in egg:
+        print "opening"
+
 w = raw_input("> ")
 act(w)
