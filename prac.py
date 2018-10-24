@@ -5,7 +5,7 @@ print "v controls up"
 print "q controls down"
 print "motor controls twisting"
 def op(h):
-    L = 0.5 + h - 1
+    L = float(h) - 0.5
     L >= 0
     L < 5.6 #placeholder maximum
     T = time.time() + L
@@ -14,7 +14,7 @@ def op(h):
         if time.time() >= T:
             print "stopping"
 def up(v):
-    P = 0.5 + v - 1
+    P = float(v) - 0.5
     P < 5.6 #placeholder maximum
     P >= 0
     A = time.time() + P
@@ -23,7 +23,7 @@ def up(v):
         if time.time() >= A:
             print "stopping"
 def do(q):
-    B = 0.5 + q - 1
+    B = float(q) - 0.5
     B < 5.6 #placeholder maximum
     B >= 0
     C = time.time() + B
@@ -43,3 +43,7 @@ h = raw_input("h: ")
 v = raw_input("v: ")
 q = raw_input("q: ")
 motor = raw_input("motor: ")
+op(h)
+up(v)
+do(q)
+tw(motor)
