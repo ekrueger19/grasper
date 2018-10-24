@@ -15,7 +15,8 @@ def op(h):
             print "stopping"
 def up(v):
     P = 0.5 + v - 1
-    0 =< P < 5.6 #placeholder maximum
+    P < 5.6 #placeholder maximum
+    P >= 0
     A = time.time() + P
     while time.time() < A:
         print "going up"
@@ -23,7 +24,8 @@ def up(v):
             print "stopping"
 def do(q):
     B = 0.5 + q - 1
-    0 =< B < 5.6 #placeholder maximum
+    B < 5.6 #placeholder maximum
+    B >= 0
     C = time.time() + B
     while time.time() < C:
         print "going down"
@@ -34,6 +36,8 @@ def tw(motor):
         print "turn left"
     elif motor == 600:
         print "turn right"
+    else:
+        print "oops"
 
 h = raw_input("h: ")
 v = raw_input("v: ")
