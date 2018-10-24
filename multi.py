@@ -6,18 +6,28 @@ x = 1
 y = 2
 twist = 0
 
-print "h controls opening/closing"
+print "h controls opening"
+print "egg controls closing"
 print "v controls up"
 print "q controls down"
 print "motor controls twisting"
 def op(h):
     L = float(h) - 0.5
     L >= 0
-    L < 5.6 #placeholder maximum
+    L < 3 #placeholder maximum
     T = time.time() + L
     while time.time() < T:
         RPL.servoWrite(x, 2000)
         if time.time() >= T:
+            RPL.servoWrite(x, 0)
+def clo(egg):
+    gug = float(egg) - 0.5
+    gug < 5.6 #placeholder maximum
+    gug >= 0
+    greg = time.time() + gug
+    while time.time() < greg:
+        RPL.servoWrite(x, 1000)
+        if time.time() >= greg:
             RPL.servoWrite(x, 0)
 def up(v):
     P = float(v) - 0.5
@@ -45,10 +55,12 @@ def tw(motor):
         RPL.servoWrite(twist, 3000)
 
 h = raw_input("h: ")
+egg = raw_input("egg: ")
 v = raw_input("v: ")
 q = raw_input("q: ")
 motor = raw_input("motor: ")
 op(h)
+clo(egg)
 up(v)
 do(q)
 tw(motor)
