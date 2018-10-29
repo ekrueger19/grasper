@@ -25,25 +25,65 @@ def act(w):
             if A =< time.time():
                 RPL.servoWrite(y, 0)
     for close in egg:
-        print "closing"
+        B = time.time() + 1
+        while B > time.time():
+            RPL.servoWrite(x, 1000)
+            if B =< time.time():
+                RPL.servoWrite(x, 0)
     for op in egg:
-        print "opening"
+        C = time.time() + 1
+        while C > time.time():
+            RPL.servoWrite(x, 2000)
+            if C =< time.time():
+                RPL.servoWrite(x, 0)
     for up1 in egg:
-        print "going up"
+        D = time.time() + 1
+        while D > time.time():
+            RPL.servoWrite(y, 2000)
+            if D =< time.time():
+                RPL.servoWrite(y, 0)
     for down1 in egg:
-        print "going down"
+        E = time.time() + 1
+        while E > time.time():
+            RPL.servoWrite(y, 1000)
+            if D =< time.time():
+                RPL.servoWrite(y, 0)
     for close1 in egg:
-        print "closing"
+        F = time.time() + 1
+        while F > time.time():
+            RPL.servoWrite(x, 1000)
+            if F =< time.time():
+                RPL.servoWrite(x, 0)
     for op1 in egg:
-        print "opening"
+        G = time.time() + 1
+        while G > time.time():
+            RPL.servoWrite(x, 2000)
+            if G =< time.time():
+                RPL.servoWrite(x, 0)
     for up2 in egg:
-        print "uping"
+        H = time.time() + 1
+        while H > time.time():
+            RPL.servoWrite(y, 2000)
+            if H =< time.time():
+                RPL.servoWrite(y, 0)
     for down2 in egg:
-        print "downing"
+        I = time.time() + 1
+        while I > time.time():
+            RPL.servoWrite(y, 1000)
+            if I =< time.time():
+                RPL.servoWrite(y, 0)
     for close2 in egg:
-        print "closing"
+        J = time.time() + 1
+        while J > time.time():
+            RPL.servoWrite(x, 1000)
+            if J =< time.time():
+                RPL.servoWrite(x, 0)
     for op2 in egg:
-        print "opening"
+        K = time.time() + 1
+        while K > time.time():
+            RPL.servoWrite(x, 2000):
+            if K =< time.time():
+                RPL.servoWrite(x, 0)
 
 w = raw_input("> ")
 act(w)
