@@ -81,7 +81,7 @@ def act(w):
     for op2 in egg:
         K = time.time() + 1
         while K > time.time():
-            RPL.servoWrite(x, 2000):
+            RPL.servoWrite(x, 2000)
             if K <= time.time():
                 RPL.servoWrite(x, 0)
 
