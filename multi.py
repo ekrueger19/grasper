@@ -4,13 +4,11 @@ import time
 
 x = 1
 y = 2
-twist = 0
 
 print "h controls opening"
 print "egg controls closing"
 print "v controls up"
 print "q controls down"
-print "motor controls twisting"
 def op(h):
     L = float(h) - 0.5
     L >= 0
@@ -47,20 +45,12 @@ def do(q):
         RPL.servoWrite(y, 1000)
         if time.time() >= C:
             RPL.servoWrite(y, 0)
-def tw(motor):
-    motor = servoRead(0)
-    if motor == 3000:
-        RPL.servoWrite(twist, 600)
-    elif motor == 600:
-        RPL.servoWrite(twist, 3000)
 
 h = raw_input("h: ")
 egg = raw_input("egg: ")
 v = raw_input("v: ")
 q = raw_input("q: ")
-motor = raw_input("motor: ")
 op(h)
 clo(egg)
 up(v)
 do(q)
-tw(motor)
