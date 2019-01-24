@@ -10,7 +10,7 @@ if raw_input("> ") == "a":
     T = time.time() + 2
     while time.time() < T:
         RPL.servoWrite(x, y)
-        RPL.servoWite(2, y)
+        RPL.servoWrite(2, y)
         if time.time() >= T:
             RPL.servoWrite(x, 0)
             RPL.servoWrite(2, 0)
